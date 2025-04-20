@@ -1,1 +1,26 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: ms-usuarios
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1522/free
+    username: C##usuarios
+    password: usuarios123
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: "BqLz+2F5z8rJQNdV89sdT4g9vL5zB+L1"
+
+app:
+  owner:
+    token: "nosewey"
 
