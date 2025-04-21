@@ -16,7 +16,12 @@ spring:
         - id: ms-usuarios
           uri: http://localhost:8081
           predicates:
-            - Path= /api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**
+            - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**
+
+        - id: ms-categorias
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/categorias/**
 
 jwt:
   secret: MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud
@@ -24,4 +29,3 @@ jwt:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
-
