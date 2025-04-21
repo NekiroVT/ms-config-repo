@@ -17,6 +17,19 @@ spring:
       ddl-auto: update
     show-sql: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: MS-USUARIOS
+    description: Microservicio de usuarios
+    version: 1.0.0
+
+
 jwt:
   secret: "BqLz+2F5z8rJQNdV89sdT4g9vL5zB+L1"
 
