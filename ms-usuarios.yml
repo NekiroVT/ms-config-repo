@@ -31,7 +31,7 @@ info:
 
 
 jwt:
-  secret: "BqLz+2F5z8rJQNdV89sdT4g9vL5zB+L1"
+  secret: "MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud"
 
 app:
   owner:
