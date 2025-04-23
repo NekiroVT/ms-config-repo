@@ -17,6 +17,16 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  mail:
+    host: smtp.mailtrap.io
+    port: 2525
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+
 management:
   endpoints:
     web:
@@ -29,11 +39,9 @@ info:
     description: Microservicio de usuarios
     version: 1.0.0
 
-
 jwt:
   secret: "MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud"
 
 app:
   owner:
     token: "nosewey"
-
