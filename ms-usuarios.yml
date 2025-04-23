@@ -20,8 +20,8 @@ spring:
   mail:
     host: smtp.hostinger.com
     port: 465
-    username: TU_CORREO@proactivoweb.com   # ← Pon aquí tu correo real
-    password: TU_CONTRASEÑA_DE_HOSTINGER   # ← La contraseña que pusiste al crearlo
+    username: sistemas5O@proactivoweb.com   # ← Pon aquí tu correo real
+    password: Nekiro29/05/2022   # ← La contraseña que pusiste al crearlo
     protocol: smtp
     properties:
       mail:
