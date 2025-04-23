@@ -18,14 +18,16 @@ spring:
     show-sql: true
 
   mail:
-    host: smtp.mailtrap.io
-    port: 2525
+    host: smtp.gmail.com
+    port: 587
+    username: no-reply@wimine.com  # correo falso
+    password: cualquiera123        # contraseña falsa
     properties:
       mail:
         smtp:
           auth: false
           starttls:
-            enable: false
+            enable: true
 
 management:
   endpoints:
