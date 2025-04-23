@@ -17,18 +17,6 @@ spring:
       ddl-auto: update
     show-sql: true
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: katalccacondori515@gmail.com  # ejemplo: wimineventas@gmail.com
-    password: dnlpgailswphascs           # SIN espacios, ponlo todo junto
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-
 management:
   endpoints:
     web:
