@@ -20,12 +20,12 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: no-reply@wimine.com  # correo falso
-    password: cualquiera123        # contraseña falsa
+    username: katalccacondori515@gmail.com  # ejemplo: wimineventas@gmail.com
+    password: dnlpgailswphascs           # SIN espacios, ponlo todo junto
     properties:
       mail:
         smtp:
-          auth: false
+          auth: true
           starttls:
             enable: true
 
