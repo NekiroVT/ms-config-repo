@@ -1,52 +1,37 @@
 server:
-  port: 8084  # Aquí defines el puerto en el que se ejecutará el API Gateway
+  port: 8084  # Puerto del API Gateway
 
 spring:
   application:
-    name: ms-api-gateway  # Nombre del servicio
+    name: ms-api-gateway
 
   cloud:
     gateway:
       routes:
         # Ruta para ms-productos
         - id: ms-productos
-          uri: http://localhost:8082  # El microservicio ms-productos está en localhost:8082
+          uri: http://localhost:8082
           predicates:
-            - Path=/api/productos/**  # Filtra todas las rutas que empiezan con /api/productos/
-          filters:
-            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
-            - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
-            - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddRequestHeader=Access-Control-Allow-Credentials, true  # Para enviar cookies si es necesario
+            - Path=/api/productos/**
 
         # Ruta para ms-usuarios
         - id: ms-usuarios
-          uri: http://localhost:8081  # El microservicio ms-usuarios está en localhost:8081
+          uri: http://localhost:8081
           predicates:
             - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**
-          filters:
-            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
-            - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
-            - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddRequestHeader=Access-Control-Allow-Credentials, true
 
         # Ruta para ms-categorias
         - id: ms-categorias
-          uri: http://localhost:8083  # El microservicio ms-categorias está en localhost:8083
+          uri: http://localhost:8083
           predicates:
-            - Path=/api/categorias/**  # Filtra todas las rutas que empiezan con /api/categorias/
-          filters:
-            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
-            - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
-            - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
-            - AddRequestHeader=Access-Control-Allow-Credentials, true
+            - Path=/api/categorias/**
+
+  main:
+    web-application-type: reactive  # Forzar modo WebFlux para evitar conflictos
 
 jwt:
-  secret: MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud  # Clave secreta para JWT (si estás usando JWT para autenticación)
+  secret: MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud
 
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG  # Para depuración de las rutas en el Gateway
+    org.springframework.cloud.gateway: DEBUG
