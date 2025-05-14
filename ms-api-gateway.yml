@@ -18,6 +18,7 @@ spring:
             - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
             - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
             - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
+            - AddRequestHeader=Access-Control-Allow-Credentials, true  # Para enviar cookies si es necesario
 
         # Ruta para ms-usuarios
         - id: ms-usuarios
@@ -29,6 +30,7 @@ spring:
             - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
             - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
             - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
+            - AddRequestHeader=Access-Control-Allow-Credentials, true
 
         # Ruta para ms-categorias
         - id: ms-categorias
@@ -40,6 +42,7 @@ spring:
             - AddResponseHeader=Access-Control-Allow-Methods, GET, POST, PUT, DELETE, OPTIONS
             - AddResponseHeader=Access-Control-Allow-Headers, Content-Type, Authorization
             - AddRequestHeader=Access-Control-Allow-Origin, http://localhost:8085
+            - AddRequestHeader=Access-Control-Allow-Credentials, true
 
 jwt:
   secret: MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud  # Clave secreta para JWT (si estás usando JWT para autenticación)
