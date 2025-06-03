@@ -17,18 +17,20 @@ spring:
       ddl-auto: update
     show-sql: true
 
+
   mail:
-    host: smtp.hostinger.com
-    port: 465
-    username: sistemas5@proactivoweb.com   # ← Pon aquí tu correo real
-    password: Nekiro29/05/2022   # ← La contraseña que pusiste al crearlo
+    host: smtp.gmail.com
+    port: 587
+    username: katalccacondori515@gmail.com
+    password: yxzjkmnkqztifqst  # <- tu contraseña de app (sin espacios)
     protocol: smtp
     properties:
       mail:
         smtp:
           auth: true
-          ssl:
+          starttls:
             enable: true
+
 
 management:
   endpoints:
