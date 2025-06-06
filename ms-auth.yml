@@ -1,23 +1,18 @@
 server:
-  port: 8080
+  port: 8085  # Se puede dejar en 0 si usas puertos dinámicos o lo defines en bootstrap.yml
 
 spring:
+  application:
+    name: ms-auth
+
   datasource:
-    url: jdbc:oracle:thin:@host.docker.internal:1522/free
-    username: c##auth
+    url: jdbc:oracle:thin:@localhost:1522/free
+    username: C##auth
     password: auth123
     driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.Oracle12cDialect
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
