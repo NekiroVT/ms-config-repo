@@ -1,5 +1,5 @@
 server:
-  port: 8082  # Para que el puerto se asigne automáticamente si quieres
+  port: 8085  # Para que el puerto se asigne automáticamente si quieres
 
 spring:
   application:
