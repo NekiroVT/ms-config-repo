@@ -1,5 +1,5 @@
 server:
-  port: 8085  # Se puede dejar en 0 si usas puertos dinámicos o lo defines en bootstrap.yml
+  port: 8081  # Se puede dejar en 0 si usas puertos dinámicos o lo defines en bootstrap.yml
 
 spring:
   application:
