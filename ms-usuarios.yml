@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
     name: ms-usuarios
 
   datasource:
-    url: jdbc:oracle:thin:@localhost:1522/free
+    url: jdbc:oracle:thin:@localhost:1523/free
     username: C##usuarios
     password: usuarios123
     driver-class-name: oracle.jdbc.OracleDriver
