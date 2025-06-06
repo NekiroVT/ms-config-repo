@@ -8,31 +8,33 @@ spring:
   cloud:
     gateway:
       routes:
-        # Ruta para ms-productos
-        - id: ms-productos
-          uri: http://localhost:8082
-          predicates:
-            - Path=/api/productos/**
-
-        # Ruta para ms-usuarios
-          uri: http://localhost:8081
-          predicates:
-            - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**
-
-        # Ruta para ms-categorias
-        - id: ms-categorias
-          uri: http://localhost:8083
-          predicates:
-            - Path=/api/categorias/**
-
-        # Ruta para ms-auth
         - id: ms-auth
-          uri: http://localhost:8085
+          uri: http://localhost:8081
           predicates:
             - Path=/api/auth/**
 
+        - id: ms-usuarios
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/usuarios/**
+
+        - id: ms-setperms
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**
+
+        - id: ms-productos
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/productos/**
+
+        - id: ms-categorias
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/categorias/**
+
   main:
-    web-application-type: reactive  # Forzar modo WebFlux para evitar conflictos
+    web-application-type: reactive
 
 jwt:
   secret: MiClaveSecretaSuperLargaYSeguraQueTieneAlMenos512BitsDeLongitud
