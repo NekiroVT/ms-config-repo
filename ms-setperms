@@ -1,0 +1,18 @@
+server:
+  port: 8083  # Se puede dejar en 0 si usas puertos dinámicos o lo defines en bootstrap.yml
+
+spring:
+  application:
+    name: ms-setperms
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1524/free
+    username: C##setperms
+    password: setperms123
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
