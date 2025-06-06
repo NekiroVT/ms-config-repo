@@ -15,7 +15,6 @@ spring:
             - Path=/api/productos/**
 
         # Ruta para ms-usuarios
-        - id: ms-usuarios
           uri: http://localhost:8081
           predicates:
             - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**
@@ -25,6 +24,12 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/api/categorias/**
+
+        # Ruta para ms-auth
+        - id: ms-auth
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/auth/**
 
   main:
     web-application-type: reactive  # Forzar modo WebFlux para evitar conflictos
