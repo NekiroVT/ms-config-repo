@@ -12,13 +12,15 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/api/auth/**
+          filters:
+            - AddRequestHeader=X-Internal-Call, gateway  # ✅ AGREGADO para que ms-auth lo acepte
 
         - id: ms-usuarios
           uri: http://localhost:8082
           predicates:
             - Path=/api/usuarios/**
           filters:
-            - AddRequestHeader=X-Internal-Call, gateway  # ✅ Línea importante
+            - AddRequestHeader=X-Internal-Call, gateway
 
         - id: ms-setperms
           uri: http://localhost:8083
