@@ -26,6 +26,9 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**
+          filters:
+            - AddRequestHeader=X-Internal-Call, gateway
+
 
         - id: ms-productos
           uri: http://localhost:8084
