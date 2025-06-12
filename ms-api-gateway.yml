@@ -13,8 +13,6 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/api/usuarios/**
-          filters:
-            - AddRequestHeader=X-Internal-Call, gateway
 
         - id: ms-productos
           uri: http://localhost:8082
