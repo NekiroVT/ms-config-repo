@@ -12,7 +12,7 @@ spring:
         - id: ms-usuarios
           uri: http://localhost:8081
           predicates:
-            - Path=/api/usuarios/**
+            - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**, /api/usuarios/**, /api/auth/**
 
         - id: ms-productos
           uri: http://localhost:8082
