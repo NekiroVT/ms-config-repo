@@ -8,35 +8,21 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ms-auth
-          uri: http://localhost:8081
-          predicates:
-            - Path=/api/auth/**
-          filters:
-            - AddRequestHeader=X-Internal-Call, gateway  # ✅ AGREGADO para que ms-auth lo acepte
-
+      
         - id: ms-usuarios
-          uri: http://localhost:8082
+          uri: http://localhost:8081
           predicates:
             - Path=/api/usuarios/**
           filters:
             - AddRequestHeader=X-Internal-Call, gateway
 
-        - id: ms-setperms
-          uri: http://localhost:8083
-          predicates:
-            - Path=/api/permissions/**, /api/roles/**, /api/userroles/**, /api/rolespermisos/**
-          filters:
-            - AddRequestHeader=X-Internal-Call, gateway
-
-
         - id: ms-productos
-          uri: http://localhost:8084
+          uri: http://localhost:8082
           predicates:
             - Path=/api/productos/**
 
         - id: ms-categorias
-          uri: http://localhost:8085
+          uri: http://localhost:8083
           predicates:
             - Path=/api/categorias/**
 
