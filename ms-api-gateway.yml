@@ -17,7 +17,7 @@ spring:
         - id: ms-productos
           uri: http://localhost:8082
           predicates:
-            - Path=/api/productos/**
+            - Path=/api/productos/**, /api/claves/**
 
         - id: ms-categorias
           uri: http://localhost:8083
