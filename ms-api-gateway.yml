@@ -23,6 +23,13 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/api/categorias/**
+            
+        - id: ms-carrito
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/carrito/**
+
+          
 
       globalcors:
         corsConfigurations:
