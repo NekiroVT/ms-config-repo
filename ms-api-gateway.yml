@@ -29,6 +29,11 @@ spring:
           predicates:
             - Path=/api/carrito/**
 
+        - id: ms-logistica
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/logistica/**
+
           
 
       globalcors:
