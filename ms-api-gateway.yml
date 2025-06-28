@@ -32,7 +32,7 @@ spring:
         - id: ms-logistica
           uri: http://localhost:8085
           predicates:
-            - Path=/api/producto-logistica/**, /api/sedes/**
+            - Path=/api/producto-logistica/**, /api/sedes/**, /api/direcciones/**
 
         
 
