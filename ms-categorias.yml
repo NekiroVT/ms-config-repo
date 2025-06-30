@@ -1,4 +1,5 @@
 server:
+  address: 0.0.0.0
   port: 8083  # Se puede dejar en 0 si usas puertos dinámicos o lo defines en bootstrap.yml
 
 spring:
