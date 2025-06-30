@@ -6,7 +6,7 @@ spring:
     name: ms-usuarios
 
   datasource:
-    url: jdbc:oracle:thin:@192.168.1.100:1522/free
+    url: jdbc:oracle:thin:@26.246.241.197:1522/free
     username: C##usuarios
     password: usuarios123
     driver-class-name: oracle.jdbc.OracleDriver
