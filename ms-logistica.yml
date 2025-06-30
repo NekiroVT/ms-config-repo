@@ -1,4 +1,5 @@
 server:
+  address: 0.0.0.0
   port: 8085  # Puedes cambiar el puerto si deseas
 
 spring:
@@ -6,7 +7,7 @@ spring:
     name: ms-logistica
 
   datasource:
-    url: jdbc:oracle:thin:@localhost:1526/free
+    url: jdbc:oracle:thin:@192.168.1.100:1526/free
     username: C##logistica
     password: logistica123
     driver-class-name: oracle.jdbc.OracleDriver
