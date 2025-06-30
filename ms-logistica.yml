@@ -7,7 +7,7 @@ spring:
     name: ms-logistica
 
   datasource:
-    url: jdbc:oracle:thin:@192.168.1.100:1526/free
+    url: jdbc:oracle:thin:@26.246.241.197:1526/free
     username: C##logistica
     password: logistica123
     driver-class-name: oracle.jdbc.OracleDriver
